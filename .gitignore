@@ -2,7 +2,8 @@
 .idea/
 
 # Python build
-_pycache_/
+__pycache__/
 
 # Crypted content
 crypted.py
+token.json
