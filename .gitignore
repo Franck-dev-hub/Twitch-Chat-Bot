@@ -2,4 +2,7 @@
 .idea/
 
 # Python build
-dist/
+_pycache_/
+
+# Crypted content
+crypted.py

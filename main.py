@@ -33,7 +33,13 @@ async def lurk_command(cmd: ChatCommand):
         f'Thanks for lurking @{cmd.user.display_name}, You are the best.',
         f'Thanks for lurking @{cmd.user.display_name}, You are the best viewer.'
     ]
+    await cmd.reply(random.choice(messages))
 
+async def shoot_out(cmd: ChatCommand):
+    messages = [
+        f'Donnes du love à {cmd.user.display_name} et n\'hésites pas à le follow https://www.twitch.tv/{cmd.user.display_name}',
+        f'Allez voir le stream de {cmd.user.display_name} sur https://www.twitch.tv/{cmd.user.display_name}',
+    ]
     await cmd.reply(random.choice(messages))
 
 async def on_message(msg: ChatMessage):
@@ -56,6 +62,7 @@ async def run_bot():
 
     # Register commands
     chat.register_command('lurk', lurk_command)
+    chat.register_command('so', shoot_out)
 
     # Start the chat bot
     chat.start()
